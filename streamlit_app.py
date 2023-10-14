@@ -31,6 +31,7 @@ streamlit.header("Fruityvice Fruit Advice!")
 fruityvice_normalized = pd.json_normalize(fruityvice_response.json())
 # write normalized json into dataframe
 streamlit.dataframe(fruityvice_normalized)
+steamlit.stop()
 
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 my_cur = my_cnx.cursor()
